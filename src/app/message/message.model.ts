@@ -9,7 +9,8 @@ import { uuid } from './../util/uuid';
    id: string;
    sentAt: Date;
    isRead: boolean;
-   author: User;
+  author: User;
+  sender: User;
    text: string;
    thread: Thread;
 
@@ -18,6 +19,7 @@ import { uuid } from './../util/uuid';
      this.isRead          = obj && obj.isRead          || false;
      this.sentAt          = obj && obj.sentAt          || new Date();
      this.author          = obj && obj.author          || null;
+     this.sender          = obj && obj.sender          || null;
      this.text            = obj && obj.text            || null;
      this.thread          = obj && obj.thread          || null;
    }
